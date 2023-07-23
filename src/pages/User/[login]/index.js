@@ -52,7 +52,7 @@ export function User() {
           </h4>
         </div>
       </header>
-      <section className="border border-dotted border-gray-500 flex items-center justify-around p-4 my-2 rounded-sm">
+      <section className="border border-dotted border-gray-500 flex flex-col md:flex-row items-center justify-around p-4 my-2 rounded-sm">
         <div className="w-1/2 text-center">
           <img
             src={userInformation.avatar_url}
@@ -69,7 +69,7 @@ export function User() {
             {userInformation.location === null ? "" : userInformation.location}
           </h3>
         </div>
-        <div className="w-1/2">
+        <div className=" w-full md:w-1/2">
           <div>
             {userInformation.bio === null ? (
               ""
@@ -136,17 +136,17 @@ export function User() {
           </>
         </div>
       </section>
-      <section className="border border-dotted border-gray-500 flex items-center justify-center p-4 my-2 rounded-sm">
-        <p className="mx-2 bg-red-700 py-2 px-3 text-white text-xs font-semibold rounded-md border border-gray-300">
+      <section className="border border-dotted border-gray-500 flex flex-wrap items-center justify-center p-4 my-2 rounded-sm">
+        <p className="w-36 my-1 text-center mx-2 bg-red-700 py-2 px-3 text-white text-xs font-semibold rounded-md border border-gray-300">
           Followers: {userInformation.followers}
         </p>
-        <p className="mx-2 bg-gray-200 py-2 px-3 text-black text-xs font-semibold rounded-md border border-gray-300">
+        <p className="w-36 my-1 text-center mx-2 bg-gray-200 py-2 px-3 text-black text-xs font-semibold rounded-md border border-gray-300">
           Following: {userInformation.following}
         </p>
-        <p className="mx-2 bg-green-700 py-2 px-3 text-white text-xs font-semibold rounded-md border border-gray-300">
+        <p className="w-36 my-1 text-center mx-2 bg-green-700 py-2 px-3 text-white text-xs font-semibold rounded-md border border-gray-300">
           Public Repos: {userInformation.public_repos}{" "}
         </p>
-        <p className="mx-2 bg-gray-700 py-2 px-3 text-white text-xs font-semibold rounded-md border border-gray-300">
+        <p className="w-36 my-1 text-center mx-2 bg-gray-700 py-2 px-3 text-white text-xs font-semibold rounded-md border border-gray-300">
           Public Gists: {userInformation.public_gists}{" "}
         </p>
       </section>
